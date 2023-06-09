@@ -1,0 +1,58 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "rgnames": {
+        "value": [
+              "contoso",
+              "fabrikam",
+              "coho"
+        ]
+      },
+      "vnetName": {
+        "value": "vnet-shared-hub-westeurope-001"
+      },
+      "vnetRG": {
+        "value": "rg-shared-westeurope-01"
+      },
+      "vnet_subnetname": {
+        "value": "snet-appgateway"
+      },
+      "parbep": {
+        "value": [
+            {
+              "name": "myBackendPool"
+            },
+            {
+              "name": "myBackendPool_new"
+            }
+          ]
+      },
+      "parfeports": {
+        "value": [
+            {
+              "name": "port_80",
+              "port": "80"
+            },
+            {
+              "name": "port_8080",
+               "port": "8080"
+            }
+          ]
+      },
+      "parbehttpsettings": {
+        "value": [
+            {
+              "name": "myHTTPSetting",
+              "port": "80",
+              "protocol": "Http"
+            },
+            {
+                "name": "myHTTPSetting_new",
+                "port": "8080",
+                "protocol": "Http"
+            }
+          ]
+      }
+    }
+  }
